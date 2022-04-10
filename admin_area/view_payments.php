@@ -54,10 +54,8 @@
 
  								<th> No: </th>
  								<th> Invoice No: </th>
-                                <th> Amount Paid: </th>
- 								<th> Method: </th>
- 								<th> Reference No: </th>
- 								<th> Payment Code: </th>
+                                <th> Transaction Reference </th>
+ 								<th> Amount Paid: </th>
  								<th> Payment Date: </th>
  								<th> Delete Payment: </th>
 
@@ -80,18 +78,14 @@
  									$payment_id = $row_payments['payment_id'];
  									
  									$invoice_no = $row_payments['invoice_no'];
+
+									$transactioRef = $row_payments['transactionRef'];
  									
  									$amount = $row_payments['amount'];
 
                                     $payment_mode = $row_payments['payment_mode'];
-                                    
-                                    $ref_no = $row_payments['ref_no'];
-                                    
-                                    $code = $row_payments['code'];
 
                                     $payment_date = $row_payments['payment_date'];
-
-
 
                                     $i++;
 
@@ -101,10 +95,8 @@
  							 	
  							 	<td> <?php echo $i; ?> </td>
  							 	<td> <?php echo $invoice_no; ?> </td>
- 							 	<td> <?php echo $amount; ?></td>
- 							 	<td> <?php echo $payment_mode; ?> </td>
- 							 	<td> <?php echo $ref_no; ?></td>
- 							 	<td> <?php echo $code; ?> </td>
+ 							 	<td> <?php echo $transactioRef; ?></td>
+ 							 	<td> <?php echo $amount; ?> </td>
  							 	<td> <?php echo $payment_date; ?> </td>
  							 	<td> 
  							 		<a href="index.php?delete_payment=<?php echo $payment_id; ?>">

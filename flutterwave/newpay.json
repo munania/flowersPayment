@@ -1,0 +1,46 @@
+{
+    "status": "success",
+    "message": "Transaction fetched successfully",
+    "data": {
+        "id": 3276371,
+        "tx_ref": "keski_flowers405102889",
+        "flw_ref": "FLW-MOCK-d389053a1610abe9d393ef1f4c088b62",
+        "device_fingerprint": "cff9889239f461789bec2089c0e6f034",
+        "amount": 150,
+        "currency": "KES",
+        "charged_amount": 150,
+        "app_fee": 5.7,
+        "merchant_fee": 0,
+        "processor_response": "Approved. Successful",
+        "auth_model": "VBVSECURECODE",
+        "ip": "154.159.237.15",
+        "narration": "CARD Transaction ",
+        "status": "successful",
+        "payment_type": "card",
+        "created_at": "2022-04-08T11:11:11.000Z",
+        "account_id": 1727032,
+        "card": {
+            "first_6digits": "424242",
+            "last_4digits": "4242",
+            "issuer": " CREDIT",
+            "country": "VISA TEST CARD",
+            "type": "VISA",
+            "token": "flw-t1nf-a76964de30ad5f37329f4c326c39c879-m03k",
+            "expiry": "09/20"
+        },
+        "meta": {
+            "__CheckoutInitAddress": "http://localhost/well-known/checkout.php",
+            "price": "150",
+            "consumer_id": "23",
+            "consumer_mac": "92a3-912ba-1192a"
+        },
+        "amount_settled": 144.3,
+        "customer": {
+            "id": 1580034,
+            "name": "Rose DeWitt Bukater",
+            "phone_number": "0710290934",
+            "email": "test@test.com",
+            "created_at": "2022-04-06T19:11:01.000Z"
+        }
+    }
+}

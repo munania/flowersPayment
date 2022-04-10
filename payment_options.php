@@ -18,11 +18,12 @@
 	
 	<h1 class="text-center"> Payment Options for you </h1>
 
-	<p class="lead text-center"> <!-- p Begin -->
+	<!-- <p class="lead text-center"> p Begin -->
 		
-		<a href="order.php?c_id=<?php echo $customer_id ?>"">M-pesa Payment</a>
+		<!-- <a href="order.php?c_id= php goes here"">M-pesa Payment</a> -->
+		<!-- echo $customer_id -->
 
-	</p> <!-- p End -->
+	<!-- </p> p End -->
 
 	<center> <!-- center Begin -->
 

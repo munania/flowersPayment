@@ -201,7 +201,15 @@
 
 								</button> <!--btn btn-default End -->
 
-								<a href="checkout.php" class="btn cart">
+								<a href="<?php 
+									  if($count == 0){
+										echo "cart.php";
+									  }
+									  else{
+										  echo "checkout.php";
+									  }
+								?>
+								" class="btn cart">
 									
 									Proceed To Checkout <i class="fas fa-chevron-right"></i>
 

@@ -97,7 +97,15 @@
 					<td> <?php echo $order_status ?> </td>
 					<td>
 						
-						<a href="confirm.php?order_id=<?php echo $order_id; ?>" target="_blank" class="btn cart btn-sm"> Confirm Paid</a>
+						<a target="_blank" class="btn cart btn-sm"> <?php 
+
+							if($order_status == "Paid"){
+								$shipping = "Shipping";
+							} else {
+								$shipping = "Processing";
+							}
+						
+						echo($shipping) ?> </a>
 
 					</td>
 

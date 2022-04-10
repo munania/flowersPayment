@@ -258,15 +258,7 @@
 							 	include("my_orders.php");
 							 } 
 
-							?>
-
-							<?php
-
-							if (isset($_GET['pay_offline'])) {
-							 	include("pay_offline.php");
-							 } 
-
-							?>
+							?>				
 
 							<?php
 

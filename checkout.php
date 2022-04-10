@@ -5,8 +5,6 @@
 
  ?>
 
-
-
 	<div id="content"> <!--content Begin -->
 		
 		<div class="container"> <!--container Begin -->
@@ -96,20 +94,12 @@
 					include("payment_options.php");
 				}
 
-
-
 			 ?>
 
 			</div> <!--col-md-12 End -->
 
-
-
 			</div> <!--container End -->
 	</div> <!--content End -->
-
-
-
-
 
 	<?php
 		include("includes/footer.php");
@@ -119,30 +109,14 @@
      function makePayment() {
   FlutterwaveCheckout({
     public_key: "FLWPUBK_TEST-b30dc0f94322cbf898b2a5331603cfe2-X",
-    tx_ref: "titanic-48981487343MDI0NzMx",
+    tx_ref: "keski_flowers"+Math.floor((Math.random() * 1000000000) + 1),
     amount: <?php echo($total); ?>,
     currency: "KES",
     payment_options: "card",
+	redirect_url: "http://localhost/well-known/flutterwave/success.php?c_id=<?php echo $customer_id ?>",
 
-    callback: function(payment) {
-        // Send AJAX verification request to backend
-        verifyTransactionOnBackend(payment.id);
-      },
-      onclose: function(incomplete) {
-        if (incomplete || window.verified === false) {
-          document.querySelector("#payment-failed").style.display = 'block';
-        } else {
-          document.querySelector("form").style.display = 'none';
-          if (window.verified == true) {
-            document.querySelector("#payment-success").style.display = 'block';
-          } else {
-            document.querySelector("#payment-pending").style.display = 'block';
-          }
-        }
-      },
-
-    // redirect_url: "http://localhost/well-known/flutterwave/success.php/",
     meta: {
+	  price: <?php echo($total); ?>,
       consumer_id: 23,
       consumer_mac: "92a3-912ba-1192a",
     },
@@ -152,18 +126,11 @@
       name: "Rose DeWitt Bukater",
     },
     customizations: {
-      title: "The Titanic Store",
-      description: "Payment for an awesome cruise",
+      title: "KESKI FLOWERS",
+      description: "Payment for flowers purchase",
       logo: "https://www.logolynx.com/images/logolynx/22/2239ca38f5505fbfce7e55bbc0604386.jpeg",
     },
   });
-
-  function verifyTransactionOnBackend(transactionId) {
-    // Let's just pretend the request was successful
-    setTimeout(function() {
-      window.verified = true;
-    }, 200);
-  }
 }
 </script>
 
@@ -172,13 +139,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-<!-- <script src="js/jquery-331.min.js"></script> -->
-<!-- <script src="js.bootstrap-337.min.js"></script> -->
-
-
-
 
 </body>
 </html>
