@@ -1,7 +1,3 @@
-# keski_flowers
+# FULL ECOMMERCE WEBSITE BUILT WITH PHP, MYSQL, JAVASCRIPT, HTML AND CSS
+# PAYMENT INTERGRATION WITH FLUTTERWAVE
  flowers
-
-<!-- Security To Be implemented on -->
-change.php
-login.php
-register.php
